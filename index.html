@@ -7,69 +7,66 @@
 
 <style>
 body {
-  margin:0;
-  font-family:Arial;
-  background:#0f0f0f;
-  color:#fff;
+  margin: 0;
+  font-family: Arial;
+  background: #000;
+  color: #fff;
 }
 
 header {
-  background:#000;
-  padding:20px;
-  text-align:center;
-  border-bottom:2px solid #00ff88;
+  text-align: center;
+  padding: 20px;
 }
 
-header h1 {
-  margin:0;
-  color:#00ff88;
+h1 {
+  color: #00ff88;
 }
 
 .container {
-  padding:20px;
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
-  gap:20px;
+  padding: 15px;
 }
 
 .card {
-  background:#1c1c1c;
-  border-radius:10px;
-  overflow:hidden;
-  transition:0.3s;
+  background: #111;
+  border-radius: 15px;
+  margin-bottom: 20px;
+  overflow: hidden;
+  cursor: pointer;
 }
 
-.card:hover {
-  transform:scale(1.03);
+.carousel {
+  display: flex;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
 }
 
-.card img {
-  width:100%;
-  height:200px;
-  object-fit:cover;
+.carousel img {
+  width: 100%;
+  flex: none;
+  scroll-snap-align: start;
 }
 
 .info {
-  padding:15px;
+  padding: 15px;
 }
 
-.price {
-  color:#00ff88;
-  font-size:20px;
-  margin:10px 0;
+.preco {
+  color: #00ff88;
+  font-size: 22px;
+  margin: 10px 0;
 }
 
 .btn {
-  display:block;
-  text-align:center;
-  background:#25D366;
-  padding:12px;
-  color:#fff;
-  text-decoration:none;
-  border-radius:5px;
+  display: block;
+  text-align: center;
+  background: #00ff88;
+  color: #000;
+  padding: 12px;
+  border-radius: 10px;
+  text-decoration: none;
+  margin-top: 10px;
 }
 </style>
-
 </head>
 
 <body>
@@ -81,38 +78,90 @@ header h1 {
 
 <div class="container">
 
-  <!-- CAMINHÃO 1 -->
-  <div class="card">
-    <img src="https://raw.githubusercontent.com/vitoraugusto0224-bot/lagartixacaminhoes/refs/heads/main/55f83eb5-52af-44de-818d-dfd5ca833dee.jpeg">
-    <div class="info">
-      <h3>VW 17.230 2018</h3>
-      <div class="price">R$ 395.000</div>
-      <p>Munck 16t • Módulo passageiro • 89.000 km • 6 pneus novos</p>
-      <a class="btn" href="https://wa.me/5531973279799">Chamar no WhatsApp</a>
-    </div>
-  </div>
-
-  <!-- CAMINHÃO 2 -->
-  <div class="card">
+<!-- CAMINHÃO 2018 -->
+<div class="card" onclick="abrirPagina('2018')">
+  <div class="carousel">
     <img src="https://raw.githubusercontent.com/vitoraugusto0224-bot/lagartixacaminhoes/refs/heads/main/91c68cc7-c4a0-4aba-952f-3279b6a9d1d4.jpeg">
-    <div class="info">
-      <h3>VW 24.280 2014</h3>
-      <div class="price">R$ 245.000</div>
-      <p>Trucado • Chassi • Muito forte e pronto pra trabalhar</p>
-      <a class="btn" href="https://wa.me/5531973279799">Chamar no WhatsApp</a>
-    </div>
+    <img src="https://raw.githubusercontent.com/vitoraugusto0224-bot/lagartixacaminhoes/refs/heads/main/ae9c4c77-b475-4bf3-9f64-b3c956738597.jpeg">
+    <img src="https://raw.githubusercontent.com/vitoraugusto0224-bot/lagartixacaminhoes/refs/heads/main/b93d2b9b-88c7-40e4-aa2e-bc8182920af5.jpeg">
+    <img src="https://raw.githubusercontent.com/vitoraugusto0224-bot/lagartixacaminhoes/refs/heads/main/d89fe979-b2a6-4941-86d3-6e9598a0d009.jpeg">
   </div>
 
-  <!-- RESTO DAS FOTOS COMO GALERIA -->
-  
-  <div class="card"><img src="https://raw.githubusercontent.com/vitoraugusto0224-bot/lagartixacaminhoes/refs/heads/main/aac156f0-b83d-45ec-9528-92c4b8f78d7c.jpeg"></div>
-  <div class="card"><img src="https://raw.githubusercontent.com/vitoraugusto0224-bot/lagartixacaminhoes/refs/heads/main/ae9c4c77-b475-4bf3-9f64-b3c956738597.jpeg"></div>
-  <div class="card"><img src="https://raw.githubusercontent.com/vitoraugusto0224-bot/lagartixacaminhoes/refs/heads/main/b93d2b9b-88c7-40e4-aa2e-bc8182920af5.jpeg"></div>
-  <div class="card"><img src="https://raw.githubusercontent.com/vitoraugusto0224-bot/lagartixacaminhoes/refs/heads/main/d89fe979-b2a6-4941-86d3-6e9598a0d009.jpeg"></div>
-  <div class="card"><img src="https://raw.githubusercontent.com/vitoraugusto0224-bot/lagartixacaminhoes/refs/heads/main/de2e1e25-a3a8-47d6-9c7f-bc4c00e429ef.jpeg"></div>
-  <div class="card"><img src="https://raw.githubusercontent.com/vitoraugusto0224-bot/lagartixacaminhoes/refs/heads/main/fdd94089-3bf3-4199-ba7d-5aa6ebcdeaa1.jpeg"></div>
+  <div class="info">
+    <h2>VW 17.230 2018</h2>
+    <p class="preco">R$ 395.000</p>
+    <p>Munck 16t • 89.000 km • 6 pneus novos</p>
+  </div>
+</div>
+
+<!-- CAMINHÃO 2014 -->
+<div class="card" onclick="abrirPagina('2014')">
+  <div class="carousel">
+    <img src="https://raw.githubusercontent.com/vitoraugusto0224-bot/lagartixacaminhoes/refs/heads/main/55f83eb5-52af-44de-818d-dfd5ca833dee.jpeg">
+    <img src="https://raw.githubusercontent.com/vitoraugusto0224-bot/lagartixacaminhoes/refs/heads/main/aac156f0-b83d-45ec-9528-92c4b8f78d7c.jpeg">
+    <img src="https://raw.githubusercontent.com/vitoraugusto0224-bot/lagartixacaminhoes/refs/heads/main/de2e1e25-a3a8-47d6-9c7f-bc4c00e429ef.jpeg">
+    <img src="https://raw.githubusercontent.com/vitoraugusto0224-bot/lagartixacaminhoes/refs/heads/main/fdd94089-3bf3-4199-ba7d-5aa6ebcdeaa1.jpeg">
+  </div>
+
+  <div class="info">
+    <h2>Caminhão 2014</h2>
+    <p class="preco">R$ 280.000</p>
+    <p>Ótimo estado • pronto para trabalho</p>
+  </div>
+</div>
 
 </div>
+
+<script>
+const whatsappLink = "https://wa.me/5531973279799?text=Vim%20pelo%20site%20e%20tenho%20interesse%20sobre%20um%20caminh%C3%A3o";
+
+function abrirPagina(modelo) {
+  if(modelo === '2018'){
+    document.body.innerHTML = `
+      <h1 style="text-align:center;color:#00ff88;">VW 17.230 2018</h1>
+
+      <div class="carousel">
+        <img src="https://raw.githubusercontent.com/vitoraugusto0224-bot/lagartixacaminhoes/refs/heads/main/91c68cc7-c4a0-4aba-952f-3279b6a9d1d4.jpeg">
+        <img src="https://raw.githubusercontent.com/vitoraugusto0224-bot/lagartixacaminhoes/refs/heads/main/ae9c4c77-b475-4bf3-9f64-b3c956738597.jpeg">
+        <img src="https://raw.githubusercontent.com/vitoraugusto0224-bot/lagartixacaminhoes/refs/heads/main/b93d2b9b-88c7-40e4-aa2e-bc8182920af5.jpeg">
+        <img src="https://raw.githubusercontent.com/vitoraugusto0224-bot/lagartixacaminhoes/refs/heads/main/d89fe979-b2a6-4941-86d3-6e9598a0d009.jpeg">
+      </div>
+
+      <div style="padding:20px;">
+        <p><b>Preço:</b> R$ 395.000</p>
+        <p>Munck Masal 16 toneladas</p>
+        <p>Módulo passageiro com banheiro</p>
+        <p>89.000 km</p>
+        <p>6 pneus novos</p>
+
+        <a class="btn" href="${whatsappLink}">Chamar no WhatsApp</a>
+      </div>
+    `;
+  }
+
+  if(modelo === '2014'){
+    document.body.innerHTML = `
+      <h1 style="text-align:center;color:#00ff88;">Caminhão 2014</h1>
+
+      <div class="carousel">
+        <img src="https://raw.githubusercontent.com/vitoraugusto0224-bot/lagartixacaminhoes/refs/heads/main/55f83eb5-52af-44de-818d-dfd5ca833dee.jpeg">
+        <img src="https://raw.githubusercontent.com/vitoraugusto0224-bot/lagartixacaminhoes/refs/heads/main/aac156f0-b83d-45ec-9528-92c4b8f78d7c.jpeg">
+        <img src="https://raw.githubusercontent.com/vitoraugusto0224-bot/lagartixacaminhoes/refs/heads/main/de2e1e25-a3a8-47d6-9c7f-bc4c00e429ef.jpeg">
+        <img src="https://raw.githubusercontent.com/vitoraugusto0224-bot/lagartixacaminhoes/refs/heads/main/fdd94089-3bf3-4199-ba7d-5aa6ebcdeaa1.jpeg">
+      </div>
+
+      <div style="padding:20px;">
+        <p><b>Preço:</b> R$ 280.000</p>
+        <p>Caminhão revisado</p>
+        <p>Pronto para trabalho pesado</p>
+        <p>Excelente custo-benefício</p>
+
+        <a class="btn" href="${whatsappLink}">Chamar no WhatsApp</a>
+      </div>
+    `;
+  }
+}
+</script>
 
 </body>
 </html>
